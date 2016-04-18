@@ -8,4 +8,4 @@ ratings:
   paths:
   - "**.js"
 exclude_paths:
-- templates/**
+- src/generators/app/templates/**
