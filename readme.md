@@ -39,7 +39,6 @@ ___
 ├── .codeclimate.yml
 ├── .eslintignore
 ├── .eslintrc
-├── .flowconfig
 ├── .gitignore
 ├── .npmignore
 ├── CHANGELOG.md
