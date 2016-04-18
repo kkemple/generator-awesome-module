@@ -54,7 +54,7 @@ test('test', (t) => {
         t.fail(err.message)
       }
 
-      t.pass('src/index.js has proper module name')
+      t.pass('src/index.js has proper settings (moduleName)')
       t.end()
     })
 })
@@ -65,12 +65,15 @@ test('test', (t) => {
     .withPrompts(options)
     .on('end', () => {
       try {
-        assert.fileContent('src/index.test.js', 'assert.equal(myModule(), \'test\', \'should return module name\')')
+        assert.fileContent(
+          'src/index.test.js',
+          'assert.equal(myModule(), \'test\', \'should return module name\')'
+        )
       } catch (err) {
         t.fail(err.message)
       }
 
-      t.pass('src/index.test.js has proper module name')
+      t.pass('src/index.test.js has proper settings (moduleName)')
       t.end()
     })
 })
@@ -86,7 +89,7 @@ test('test', (t) => {
         t.fail(err.message)
       }
 
-      t.pass('LICENSE.md has proper author name')
+      t.pass('LICENSE.md has proper settings (authorName)')
       t.end()
     })
 })
@@ -102,13 +105,14 @@ test('test', (t) => {
         assert.fileContent('package.json', '"url": "git+ssh://git@github.com/kkemple/test.git"')
         assert.fileContent('package.json', '"url": "https://github.com/kkemple/test/issues"')
         assert.fileContent('package.json', '"homepage": "https://github.com/kkemple/test#readme"')
-        assert.fileContent('package.json', '"keywords": [\"awesome\", \"module\", \"test\"]')
+        assert.fileContent('package.json', '"keywords": ["awesome", "module", "test"]')
         assert.fileContent('package.json', '"author": "Test <test@test.com>"')
       } catch (err) {
         t.fail(err.message)
       }
 
-      t.pass('LICENSE.md has proper author name')
+      /* eslint max-len: [0] */
+      t.pass('package.json has proper settings (moduleName, moduleDescription, repository, authorName, authorEmail)')
       t.end()
     })
 })
@@ -130,7 +134,7 @@ test('test', (t) => {
         t.fail(err.message)
       }
 
-      t.pass('LICENSE.md has proper author name')
+      t.pass('README.md has proper settings (moduleName, moduleDescription, repository)')
       t.end()
     })
 })

@@ -46,7 +46,6 @@
     "eslint-plugin-jsx-a11y": "^0.6.2",
     "eslint-plugin-react": "^4.3.0",
     "istanbul": "^1.0.0-alpha.2",
-    "node-babel": "^0.1.2",
     "rimraf": "^2.5.2",
     "tape": "^4.5.1",
     "yeoman-assert": "^2.2.0",

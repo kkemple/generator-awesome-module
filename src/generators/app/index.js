@@ -1,53 +1,53 @@
-var generators = require('yeoman-generator')
-var mkdirp = require('mkdirp')
+import generators from 'yeoman-generator'
+import mkdirp from 'mkdirp'
 
-var prompts = [
+const prompts = [
   {
     type: 'input',
     name: 'moduleName',
     message: 'module name ...',
-    default: 'awesome'
+    default: 'awesome',
   },
 
   {
     type: 'input',
     name: 'moduleDescription',
     message: 'module description ...',
-    default: 'An awesome module for awesome projects...'
+    default: 'An awesome module for awesome projects...',
   },
 
   {
     type: 'input',
     name: 'keywords',
     message: 'keywords ...',
-    default: 'awesome, node module'
+    default: 'awesome, node module',
   },
 
   {
     type: 'input',
     name: 'authorName',
     message: 'author name ...',
-    default: 'Some Person'
+    default: 'Some Person',
   },
 
   {
     type: 'input',
     name: 'authorEmail',
     message: 'author email ...',
-    default: 'example@awesome-module.com'
+    default: 'example@awesome-module.com',
   },
 
   {
     type: 'input',
     name: 'repository',
     message: 'repository ... (org/repo)',
-    default: 'org/repo'
+    default: 'org/repo',
   },
 ]
 
 module.exports = generators.Base.extend({
   prompting() {
-    var done = this.async()
+    const done = this.async()
 
     this.prompt(prompts, (answers) => {
       this.moduleName = answers.moduleName
@@ -122,7 +122,7 @@ module.exports = generators.Base.extend({
         repository: this.repository,
         keywords: this.keywords
           .split(/,\s+/)
-          .map((k) => `"${k}"`).join(', ')
+          .map((k) => `"${k}"`).join(', '),
       }
     )
 
@@ -149,7 +149,7 @@ module.exports = generators.Base.extend({
         repository: this.repository,
         keywords: this.keywords
           .split(/,\s+/)
-          .map((k) => `"${k}"`).join(', ')
+          .map((k) => `"${k}"`).join(', '),
       }
     )
   },
