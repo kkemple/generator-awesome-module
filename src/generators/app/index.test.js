@@ -30,7 +30,7 @@ test('test', (t) => {
           '.codeclimate.yml',
           'circle.yml',
           'package.json',
-          'readme.md',
+          'README.md',
           'CHANGELOG.md',
           'LICENSE.md',
         ])
