@@ -11,3 +11,6 @@
 
 ### 0.0.5
 - remove `.flowconfig` from readme
+
+### 0.0.5
+- remove unnecessary dependency

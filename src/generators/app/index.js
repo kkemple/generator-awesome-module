@@ -1,5 +1,6 @@
+import fs from 'fs'
+
 import generators from 'yeoman-generator'
-import mkdirp from 'mkdirp'
 
 const prompts = [
   {
@@ -61,7 +62,7 @@ module.exports = generators.Base.extend({
   },
 
   scaffoldFolders() {
-    mkdirp.sync('src')
+    fs.mkdirSync('src')
   },
 
   writing() {
