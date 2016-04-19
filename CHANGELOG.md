@@ -14,3 +14,6 @@
 
 ### 0.0.5
 - remove unnecessary dependency
+
+### 0.0.7
+- upgrade dependencies
