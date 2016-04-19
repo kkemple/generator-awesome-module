@@ -2,6 +2,8 @@ machine:
   node:
     version: 4.2.6
 dependencies:
+  pre:
+    - npm install -g npm
   post:
     - npm run compile
     - |
